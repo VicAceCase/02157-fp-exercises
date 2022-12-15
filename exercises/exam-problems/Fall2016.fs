@@ -49,8 +49,10 @@ module Q2 =
     *)
 
     (* Part 3
-        No, replace is not tail recursive. In order to be tail recursive, the recursive call needs to have calculated its arguments in the next call before calling, as a result not adding pending operations to the callstack.
-        Adding accumulating paramenter: acc to the function, calculating a correct accumulating list without pending list concatination operations for each call.
+        No, replace is not tail recursive. In order to be tail recursive, the recursive call needs to have calculated its arguments
+        in the next call before calling, as a result not adding pending operations to the callstack.
+        Adding accumulating paramenter: acc to the function, calculating a correct accumulating list without pending list concatination
+        operations for each call.
     *)
     let rec replace_tail_recursive a b xs acc =
         match xs with
@@ -70,7 +72,8 @@ module Q3 =
 
         seq1 : seq<int*int>     
              It can be infered to be integers as pos is used, which is integers.
-             It computes an infinite series of tuples starting with (0,0) and then both negative and positive tuples with element in pos in both values ie. [(0,0);(1,1);(-1,-1);(2,2);(-2,-2);....]
+             It computes an infinite series of tuples starting with (0,0) and then both negative and positive tuples with element
+             in pos in both values ie. [(0,0);(1,1);(-1,-1);(2,2);(-2,-2);....]
 
         val1 : seq<int*int>
              Type can be infered as it is using seq1.
